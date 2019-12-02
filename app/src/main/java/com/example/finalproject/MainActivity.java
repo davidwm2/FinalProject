@@ -20,13 +20,40 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Button creators so we can call them
         Button playBlackjack = findViewById(R.id.playBlackjack);
+        Button playPoker = findViewById(R.id.playPoker);
+        Button playSlots = findViewById(R.id.playSlots);
+        Button playRoulette = findViewById(R.id.playRoulette);
         // Button listener here to launch the blackjack activity when the button is clicked
         playBlackjack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BlackjackActivity.class);
+                startActivity(intent);
+            }
+        });
+        // Button listener here to launch the poker activity when the button is clicked
+        playPoker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PokerActivity.class);
+                startActivity(intent);
+            }
+        });
+        // Button listener here to launch the slots activity when the button is clicked
+        playSlots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SlotsActivity.class);
+                startActivity(intent);
+            }
+        });
+        // Button listener here to launch the roulette activity when the button is clicked
+        playRoulette.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RouletteActivity.class);
                 startActivity(intent);
             }
         });
