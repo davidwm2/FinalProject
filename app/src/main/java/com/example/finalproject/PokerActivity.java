@@ -49,7 +49,7 @@ public class PokerActivity extends AppCompatActivity {
     private void dealt() {
         Button deal = findViewById(R.id.dealButton);
         TextView guide = findViewById(R.id.pokerMoves);
-        String message = "You replaced cards";
+        String message = "You replaced card(s)";
         int j = 1;
         for (int i = 0; i < 5; i++) {
             if (check[i]) {
