@@ -24,16 +24,11 @@ public class Hand {
      * @param deck contains the cards from which the hand is dealt.
      */
     public void hit (Deck deck) {
-        hand.add(deck.drawCard());
-        handValue += hand.get(hand.size() - 1).getValue();
-        size++;
+        if (deck.canDraw()) {
+            hand.add(deck.drawCard());
+            handValue += hand.get(hand.size() - 1).getValue();
+        }
     }
 
-    /**
-     * @return the size of the hand.
-     */
-    public int getSize() {
-        return size;
-    }
 
 }

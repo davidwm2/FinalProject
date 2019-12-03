@@ -38,4 +38,11 @@ class Deck {
     public Card drawCard() {
         return deck.remove(0);
     }
+
+    public Boolean canDraw() {
+        if (deck.remove(0) != null) {
+            return true;
+        }
+        return false;
+    }
 }
