@@ -22,15 +22,6 @@ public class BlackjackActivity extends AppCompatActivity {
             } else if (i == 1) {
                 TextView textView = (TextView) findViewById(R.id.mySecond);
                 textView.setText(playerHand.hand.get(i).getValue());
-            } else if (i == 2) {
-                TextView textView = (TextView) findViewById(R.id.myThird);
-                textView.setText(playerHand.hand.get(i).getValue());
-            } else if (i == 3) {
-                TextView textView = (TextView) findViewById(R.id.myFourth);
-                textView.setText(playerHand.hand.get(i).getValue());
-            } else if (i == 4) {
-                TextView textView = (TextView) findViewById(R.id.myFifth);
-                textView.setText(playerHand.hand.get(i).getValue());
             }
         }
     }
