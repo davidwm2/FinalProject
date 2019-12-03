@@ -16,6 +16,12 @@ public class BlackjackActivity extends AppCompatActivity {
 
         deck = new Deck();
         playerHand = new Hand(deck);
+
+        TextView firstCard = findViewById(R.id.myFirst);
+        firstCard.setText("Card Drawn");
+
+        TextView secondCard = findViewById(R.id.mySecond);
+        secondCard.setText("Card Drawn");
     }
 
 }

@@ -23,7 +23,7 @@ public class PokerActivity extends AppCompatActivity {
         deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("It;s good");
+                System.out.println("It's good");
             }
         });
     }
