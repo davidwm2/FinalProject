@@ -14,7 +14,7 @@ public class BlackjackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blackjack);
 
-        Deck deck = new Deck();
+        deck = new Deck();
         playerHand = new Hand(deck);
     }
 
