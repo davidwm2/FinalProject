@@ -19,21 +19,21 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/Slot 1"
+            android:id="@+id/slotOne"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/Slot 2"
+            android:id="@+id/slotTwo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/Slot 3"
+            android:id="@+id/slotThree"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
