@@ -13,16 +13,11 @@ public class BlackjackActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blackjack);
-
-        for (int i = 0; i < playerHand.getSize(); i++) {
-            if(i == 0) {
                 TextView textView = (TextView) findViewById(R.id.myFirst);
-                textView.setText(playerHand.hand.get(i).getValue());
-            } else if (i == 1) {
-                TextView textView = (TextView) findViewById(R.id.mySecond);
-                textView.setText(playerHand.hand.get(i).getValue());
-            }
-        }
+                textView.setText(playerHand.hand.get(0).getValue());
+
+                textView = (TextView) findViewById(R.id.mySecond);
+                textView.setText(playerHand.hand.get(1).getValue());
     }
 
 }
