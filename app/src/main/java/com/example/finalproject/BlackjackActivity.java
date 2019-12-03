@@ -12,7 +12,7 @@ public class BlackjackActivity extends AppCompatActivity {
     Deck deck; // initializes the deck we use to play.
     Hand playerHand;
     Hand dealerHand;
-    Dialog dialog;
+    Boolean isOver = false;
 
 
     @Override
@@ -21,6 +21,7 @@ public class BlackjackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blackjack);
 
         deck = new Deck();
+        deck.shuffle();
         playerHand = new Hand(deck); // makes a two card hand
         dealerHand = new Hand(deck);
         TextView firstCard = findViewById(R.id.myFirst);
@@ -39,7 +40,8 @@ public class BlackjackActivity extends AppCompatActivity {
         findViewById(R.id.dealerFourth).setVisibility(View.GONE);
 
         findViewById(R.id.split).setVisibility(View.GONE);
-        if (playerHand.hand.get(0) == playerHand.hand.get(1)) {
+
+        if (playerHand.hand.get(0).getRank() == playerHand.hand.get(1).getRank()) {
             findViewById(R.id.split).setVisibility(View.VISIBLE);
         }
 
@@ -64,6 +66,45 @@ public class BlackjackActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.stand).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                while(!isOver) {
+                    dealer();
+                }
+            }
+        });
+
+    }
+    public void dealer() {
+        if (dealerHand.getHandValue() > 21) {
+            isOver = true;
+            Intent intent = new Intent(BlackjackActivity.this, winActivity.class);
+            startActivity(intent);
+        } else if (dealerHand.getHandValue() < 17) {
+            dealerHand.hit(deck);
+            if (findViewById(R.id.dealerThird).getVisibility() == View.GONE) {
+                TextView myThird = findViewById(R.id.dealerThird);
+                myThird.setText("Card Drawn");
+                myThird.setVisibility(View.VISIBLE);
+            } else if (findViewById(R.id.dealerFourth).getVisibility() == View.GONE) {
+                TextView myThird = findViewById(R.id.dealerFourth);
+                myThird.setText("Card Drawn");
+                myThird.setVisibility(View.VISIBLE);
+            }
+        } else if (dealerHand.getHandValue() >= 17) {
+            isOver = true;
+            if (playerHand.getHandValue() > dealerHand.getHandValue()) {
+                Intent intent = new Intent(BlackjackActivity.this, winActivity.class);
+                startActivity(intent);
+            } else if (playerHand.getHandValue() < dealerHand.getHandValue()) {
+                Intent intent = new Intent(BlackjackActivity.this, lostActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(BlackjackActivity.this, tieActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 
 }

@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class lostActivity extends AppCompatActivity {
+public class tieActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lost);
-
+        setContentView(R.layout.activity_tie);
         //Button creators so we can call them
         Button playBlackjack = findViewById(R.id.playBlackjack);
         Button playPoker = findViewById(R.id.playPoker);
@@ -22,7 +21,7 @@ public class lostActivity extends AppCompatActivity {
         playBlackjack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(lostActivity.this, BlackjackActivity.class);
+                Intent intent = new Intent(tieActivity.this, BlackjackActivity.class);
                 startActivity(intent);
             }
         });
@@ -30,7 +29,7 @@ public class lostActivity extends AppCompatActivity {
         playPoker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(lostActivity.this, PokerActivity.class);
+                Intent intent = new Intent(tieActivity.this, PokerActivity.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +37,7 @@ public class lostActivity extends AppCompatActivity {
         playSlots.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(lostActivity.this, SlotsActivity.class);
+                Intent intent = new Intent(tieActivity.this, SlotsActivity.class);
                 startActivity(intent);
             }
         });
