@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Button playBlackjack = findViewById(R.id.playBlackjack);
         Button playPoker = findViewById(R.id.playPoker);
         Button playSlots = findViewById(R.id.playSlots);
-        Button playRoulette = findViewById(R.id.playRoulette);
         // Button listener here to launch the blackjack activity when the button is clicked
         playBlackjack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,14 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        // Button listener here to launch the roulette activity when the button is clicked
-        playRoulette.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RouletteActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     @Override
