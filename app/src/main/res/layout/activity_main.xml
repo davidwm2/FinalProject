@@ -31,6 +31,23 @@
             android:layout_height="wrap_content"
             android:text="Play Slots!" />
 
+        <Button
+            android:id="@+id/playRoulette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Roulette!" />
+
     </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/menuAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

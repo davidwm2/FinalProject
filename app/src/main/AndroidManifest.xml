@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tieActivity"></activity>
-        <activity android:name=".winActivity" />
-        <activity android:name=".lostActivity" />
-        <activity android:name=".SlotsActivity" />
+        <!-- Sample AdMob App ID: ca-app-pub-2847830319541728~4847744606 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2847830319541728~4847744606"/>
+        <activity android:name=".SlotsActivity"></activity>
         <activity android:name=".PokerActivity" />
         <activity android:name=".BlackjackActivity" />
         <activity
