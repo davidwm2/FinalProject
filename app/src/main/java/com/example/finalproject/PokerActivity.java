@@ -46,6 +46,10 @@ public class PokerActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * This
+     */
     private void dealt() {
         Button deal = findViewById(R.id.dealButton);
         TextView guide = findViewById(R.id.pokerMoves);
