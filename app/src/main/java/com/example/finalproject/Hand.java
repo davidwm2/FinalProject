@@ -20,6 +20,12 @@ public class Hand {
             hand.add(deck.drawCard());
         }
     }
+    Hand(Deck deck, boolean pokerTruth) {
+        hand = new ArrayList<Card>();
+        for (int i = 0; i < 5; i++) {
+            hand.add(deck.drawCard());
+        }
+    }
 
     /**
      * @param deck contains the cards from which the hand is dealt.

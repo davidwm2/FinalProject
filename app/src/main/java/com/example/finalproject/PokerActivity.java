@@ -11,18 +11,25 @@ import android.widget.TextView;
 
 public class PokerActivity extends AppCompatActivity {
     private boolean[] check;
+    TextView guide = findViewById(R.id.pokerMoves);
+    Button deal = findViewById(R.id.dealButton);
+    final CheckBox cardOne = findViewById(R.id.cardOne);
+    final CheckBox cardTwo = findViewById(R.id.cardTwo);
+    final CheckBox cardThree = findViewById(R.id.cardThree);
+    final CheckBox cardFour = findViewById(R.id.cardFour);
+    final CheckBox cardFive = findViewById(R.id.cardFive);
+    Deck deck;
+    Hand playerHand;
+    Hand dealerHand;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poker);
-        // Calling all the objects in the 5 hand poker game.
-        TextView guide = findViewById(R.id.pokerMoves);
-        Button deal = findViewById(R.id.dealButton);
-        final CheckBox cardOne = findViewById(R.id.cardOne);
-        final CheckBox cardTwo = findViewById(R.id.cardTwo);
-        final CheckBox cardThree = findViewById(R.id.cardThree);
-        final CheckBox cardFour = findViewById(R.id.cardFour);
-        final CheckBox cardFive = findViewById(R.id.cardFive);
+        //hand setup
+        deck = new Deck();
+        deck.shuffle();
+        playerHand = new Hand(deck, true);
+        dealerHand = new Hand(deck, false);
         //sets the checkboxes visible for the game.
         cardOne.setVisibility(View.VISIBLE);
         cardTwo.setVisibility(View.VISIBLE);
