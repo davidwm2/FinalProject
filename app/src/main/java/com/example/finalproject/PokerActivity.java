@@ -26,6 +26,7 @@ public class PokerActivity extends AppCompatActivity {
      * dealer's hand
      */
     Hand dealerHand;
+    private  int pairs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -94,11 +95,20 @@ public class PokerActivity extends AppCompatActivity {
         } else {
             endText.setText(message + ".");
         }
+
+        for (int i = 0; i < 4; i++) {
+            for (int k = i + 1; k <= 4 - i; k++) {
+                pairFinder(i, k);
+            }
+        }
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+    }
+    private int pairFinder(int current, int other) {
+        if (playerHand.hand.get(current).getSuit().)
     }
 }
