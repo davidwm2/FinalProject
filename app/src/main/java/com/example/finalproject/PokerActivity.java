@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class PokerActivity extends AppCompatActivity {
@@ -174,6 +176,7 @@ public class PokerActivity extends AppCompatActivity {
         return false;
     }
     private void dealerMoves(Deck deck) {
-
+        TextView dealerText = findViewById(R.id.dealerText);
+        dealerText.setText("Dealer is alseep");
     }
 }
