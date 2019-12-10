@@ -120,6 +120,7 @@ public class PokerActivity extends AppCompatActivity {
         finThree.setText(playerHand.hand.get(2).toString());
         finFour.setText(playerHand.hand.get(3).toString());
         finFive.setText(playerHand.hand.get(4).toString());
+        dealerMoves(deck);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,5 +172,8 @@ public class PokerActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+    private void dealerMoves(Deck deck) {
+
     }
 }

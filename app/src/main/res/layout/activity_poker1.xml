@@ -14,12 +14,18 @@
         <TextView
             android:id="@+id/endText"
             android:layout_width="match_parent"
-            android:layout_height="520dp"
+            android:layout_height="224dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dealerText"
+            android:layout_width="match_parent"
+            android:layout_height="288dp"
             android:text="TextView" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="96dp"
+            android:layout_height="94dp"
             android:orientation="horizontal">
 
             <TextView
