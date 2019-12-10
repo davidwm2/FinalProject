@@ -5,72 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-47dp">
 
         <TextView
             android:id="@+id/endText"
-            android:layout_width="match_parent"
-            android:layout_height="224dp"
-            android:text="TextView" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/dealerText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/dealerText"
-            android:layout_width="match_parent"
-            android:layout_height="288dp"
-            android:text="TextView" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/cardFiveFinal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endText" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/cardOneFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="93dp"
-                android:layout_weight="1"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/cardOneFinal"
+            android:layout_width="82dp"
+            android:layout_height="104dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/homeButton"
+            app:layout_constraintEnd_toStartOf="@+id/cardTwoFinal"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/cardTwoFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="93dp"
-                android:layout_weight="1"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/cardTwoFinal"
+            android:layout_width="82dp"
+            android:layout_height="104dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/homeButton"
+            app:layout_constraintEnd_toStartOf="@+id/cardThreeFinal" />
 
-            <TextView
-                android:id="@+id/cardThreeFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="93dp"
-                android:layout_weight="1"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/cardThreeFinal"
+            android:layout_width="82dp"
+            android:layout_height="104dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/homeButton"
+            app:layout_constraintEnd_toStartOf="@+id/cardFourFinal" />
 
-            <TextView
-                android:id="@+id/cardFourFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="93dp"
-                android:layout_weight="1"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/cardFourFinal"
+            android:layout_width="82dp"
+            android:layout_height="104dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/homeButton"
+            app:layout_constraintEnd_toStartOf="@+id/cardFiveFinal" />
 
-            <TextView
-                android:id="@+id/cardFiveFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="93dp"
-                android:layout_weight="1"
-                android:text="TextView" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/cardFiveFinal"
+            android:layout_width="82dp"
+            android:layout_height="104dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/homeButton"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/homeButton"
-            android:layout_width="match_parent"
+            android:layout_width="411dp"
             android:layout_height="wrap_content"
-            android:text="Home" />
+            android:text="Home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
