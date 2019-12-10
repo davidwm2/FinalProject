@@ -110,14 +110,24 @@ public class PokerActivity extends AppCompatActivity {
         /*if (j > 4) {
             endText.setText("You held your cards.  You have " + pairs +" pairs.");
         } */
-        if (fullHouse(playerHand.hand)){
+        if (fourOfAKind(playerHand.hand)) {
+            playerScore = 5;
+            endText.setText(message + ". You have four of a kind!.");
+        } else if (fullHouse(playerHand.hand)){
             endText.setText(message + ". You have a full house.");
-        }else if (threeOfAKind(playerHand.hand)) {
+            playerScore = 4;
+        } else if (threeOfAKind(playerHand.hand)) {
             endText.setText(message + ". You have three of a kind.");
-        } else if (pairs == 1){
+            playerScore = 3;
+        } else if (pairs == 2){
             endText.setText(message + ". You have " + pairs +" pair.");
+            playerScore = 2;
+        } else if (pairs == 1) {
+            endText.setText(message + ". You have " + pairs +" pair.");
+            playerScore = 1;
         } else {
-            endText.setText(message + ". You have " + pairs +" pairs.");
+            endText.setText(message + ". You have junk.");
+            playerScore = 0;
         }
         finOne.setText(playerHand.hand.get(0).toString());
         finTwo.setText(playerHand.hand.get(1).toString());
@@ -179,15 +189,41 @@ public class PokerActivity extends AppCompatActivity {
         return false;
     }
     private boolean fourOfAKind(ArrayList<Card> cards) {
+        int k = 0;
         for (int i = 0; i < 1; i++) {
-
+            k = 0;
+            for (int j = i + 1; j < 3; j++) {
+                if (cards.get(i).getRank() == cards.get(j).getRank()) {
+                    k++;
+                }
+            }
+        }
+        if (k == 4) {
+            return true;
+        }
+        return false;
+    }
+    private void dealerMoves(Deck deck) {
+        TextView dealerText = findViewById(R.id.dealerText);
+        if (fourOfAKind(dealerHand.hand)) {
+            dealerScore = 5;
+        } else if (fullHouse(dealerHand.hand)) {
+            dealerScore = 4;
+        } else if (threeOfAKind(dealerHand.hand)) {
+            dealerScore = 3;
+        } else if (pairFinder(dealerHand.hand) == 2) {
+            dealerScore = 2;
+        } else if (pairFinder(dealerHand.hand) == 0) {
+            dealerScore = 1;
+        } else {
+            dealerScore = 0;
+        }
+        if (dealerScore > playerScore) {
+            dealerText.setText("Dealer wins");
+        } else if (dealerScore == playerScore) {
+            dealerText.setText("Tie Game!");
+        } else {
+            dealerText.setText("You win!");
         }
     }
-    /*private void dealerMoves(Deck deck) {
-        TextView dealerText = findViewById(R.id.dealerText);
-        if (fullHouse(dealerHand.hand)) {
-
-        }
-        dealerText.setText("Dealer is alseep");
-    } */
 }
