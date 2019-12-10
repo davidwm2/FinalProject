@@ -16,26 +16,29 @@
         <Button
             android:id="@+id/playBlackjack"
             android:layout_width="match_parent"
-            android:layout_height="264dp"
+            android:layout_height="wrap_content"
             android:text="Play BlackJack!" />
 
         <Button
             android:id="@+id/playPoker"
             android:layout_width="match_parent"
-            android:layout_height="219dp"
+            android:layout_height="wrap_content"
             android:text="Play Poker!" />
 
     </LinearLayout>
 
     <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/menuAdView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
+        app:layout_anchorGravity="bottom|center"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
