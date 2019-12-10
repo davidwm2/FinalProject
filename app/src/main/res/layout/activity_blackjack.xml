@@ -110,13 +110,6 @@
             android:text="Stand" />
 
         <Button
-            android:id="@+id/doubleDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Double Down!" />
-
-        <Button
             android:id="@+id/split"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
