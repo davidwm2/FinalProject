@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         playPoker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("Button clicked");
                 Intent intent = new Intent(MainActivity.this, PokerActivity.class);
                 startActivity(intent);
             }

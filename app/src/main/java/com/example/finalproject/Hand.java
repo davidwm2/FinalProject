@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Hand {
     ArrayList<Card> hand;//represents the hand
     private int handValue = 0;
-
+    private boolean dealerCheck;
     /**
      * @param deck Contains the cards from which the hand is dealt.
      */
@@ -24,6 +24,7 @@ public class Hand {
         hand = new ArrayList<Card>();
         for (int i = 0; i < 5; i++) {
             hand.add(deck.drawCard());
+            dealerCheck = pokerTruth;
         }
     }
 
