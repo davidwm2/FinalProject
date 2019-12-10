@@ -122,7 +122,7 @@ public class PokerActivity extends AppCompatActivity {
         finThree.setText(playerHand.hand.get(2).toString());
         finFour.setText(playerHand.hand.get(3).toString());
         finFive.setText(playerHand.hand.get(4).toString());
-        dealerMoves(deck);
+        //dealerMoves(deck);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -175,8 +175,11 @@ public class PokerActivity extends AppCompatActivity {
         }
         return false;
     }
-    private void dealerMoves(Deck deck) {
+    /*private void dealerMoves(Deck deck) {
         TextView dealerText = findViewById(R.id.dealerText);
+        if (fullHouse(dealerHand.hand)) {
+
+        }
         dealerText.setText("Dealer is alseep");
-    }
+    } */
 }

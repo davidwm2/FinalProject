@@ -25,12 +25,6 @@
             android:layout_height="wrap_content"
             android:text="Play Poker!" />
 
-        <Button
-            android:id="@+id/playSlots"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Play Slots!" />
-
     </LinearLayout>
 
     <TextView

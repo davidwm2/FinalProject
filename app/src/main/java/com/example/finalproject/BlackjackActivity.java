@@ -25,12 +25,12 @@ public class BlackjackActivity extends AppCompatActivity {
         playerHand = new Hand(deck); // makes a two card hand
         dealerHand = new Hand(deck);
         TextView firstCard = findViewById(R.id.myFirst);
-        firstCard.setText("Card Drawn"); //will display card content to UI
+        firstCard.setText(playerHand.hand.get(0).toString()); //will display card content to UI
         TextView secondCard = findViewById(R.id.mySecond);
-        secondCard.setText("Card Drawn"); // ""
+        secondCard.setText(playerHand.hand.get(1).toString()); // ""
 
         TextView dealerFirst = findViewById(R.id.dealerFirst);
-        dealerFirst.setText("Card Drawn"); //will display card content to UI
+        dealerFirst.setText(dealerHand.hand.get(0).toString()); //will display card content to UI
         TextView dealerSecond = findViewById(R.id.dealerSecond);
         dealerSecond.setText("Card Drawn"); // ""
 
@@ -51,11 +51,11 @@ public class BlackjackActivity extends AppCompatActivity {
                 playerHand.hit(deck);
                 if (findViewById(R.id.myThird).getVisibility() == View.GONE) {
                     TextView myThird = findViewById(R.id.myThird);
-                    myThird.setText("Card Drawn");
+                    myThird.setText(playerHand.hand.get(2).toString());
                     myThird.setVisibility(View.VISIBLE);
                 } else if (findViewById(R.id.myFourth).getVisibility() == View.GONE) {
                     TextView myFourth = findViewById(R.id.myFourth);
-                    myFourth.setText("Card Drawn");
+                    myFourth.setText(playerHand.hand.get(3).toString());
                     myFourth.setVisibility(View.VISIBLE);
                 }
                 if (playerHand.getHandValue() > 21) {

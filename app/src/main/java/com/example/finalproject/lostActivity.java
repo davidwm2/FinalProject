@@ -17,7 +17,6 @@ public class lostActivity extends AppCompatActivity {
         //Button creators so we can call them
         Button playBlackjack = findViewById(R.id.playBlackjack);
         Button playPoker = findViewById(R.id.playPoker);
-        Button playSlots = findViewById(R.id.playSlots);
         // Button listener here to launch the blackjack activity when the button is clicked
         playBlackjack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +33,7 @@ public class lostActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        // Button listener here to launch the slots activity when the button is clicked
-        playSlots.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(lostActivity.this, SlotsActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
     }
 }

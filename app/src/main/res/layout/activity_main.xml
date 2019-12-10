@@ -16,26 +16,14 @@
         <Button
             android:id="@+id/playBlackjack"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="264dp"
             android:text="Play BlackJack!" />
 
         <Button
             android:id="@+id/playPoker"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="219dp"
             android:text="Play Poker!" />
-
-        <Button
-            android:id="@+id/playSlots"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Play Slots!" />
-
-        <Button
-            android:id="@+id/playRoulette"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Play Roulette!" />
 
     </LinearLayout>
 
