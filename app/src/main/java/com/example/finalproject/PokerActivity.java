@@ -31,6 +31,8 @@ public class PokerActivity extends AppCompatActivity {
      */
     Hand dealerHand;
     private  int pairs;
+    private int playerScore;
+    private int dealerScore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -143,7 +145,8 @@ public class PokerActivity extends AppCompatActivity {
             for (int k = i + 1; k <= 4; k++) {
                 if (cards.get(i).getRank() == cards.get(k).getRank() && firstPair) {
                     pears++;
-                    firstPair = false;                }
+                    firstPair = false;
+                }
             }
         }
         return pears;
@@ -174,6 +177,11 @@ public class PokerActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+    private boolean fourOfAKind(ArrayList<Card> cards) {
+        for (int i = 0; i < 1; i++) {
+
+        }
     }
     /*private void dealerMoves(Deck deck) {
         TextView dealerText = findViewById(R.id.dealerText);
